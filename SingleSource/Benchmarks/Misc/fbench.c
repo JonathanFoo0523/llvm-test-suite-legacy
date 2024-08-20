@@ -214,7 +214,7 @@
     0.1129     0.2119	Dell Dimension XPS P133c, Pentium 133 MHz,
 			Windows 95, Microsoft Visual C 5.0.
 
-    0.0883     0.2166	Silicon Graphics Indigo², MIPS R4400,
+    0.0883     0.2166	Silicon Graphics Indigoï¿½, MIPS R4400,
                         175 Mhz, "-O3".
 
     0.0351     0.0561	Dell Dimension XPS R100, Pentium II 400 MHz,
@@ -583,7 +583,7 @@ double x;
 
 */
 
-static void transit_surface() {
+static transit_surface() {
 	double iang,		   /* Incidence angle */
 	       rang,		   /* Refraction angle */
 	       iang_sin,	   /* Incidence angle sin */

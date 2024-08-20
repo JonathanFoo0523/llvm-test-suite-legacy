@@ -148,13 +148,10 @@ int main() {
   t1();
   t2();
   t3();
-
-  // Disabled for now until we move to USE_REFERENCE_OUTPUT, gcc/llvm-gcc get
-  // the semantics wrong on x86_64.
-#if 0
+  // Unfortunately, gcc gets the semantics wrong on x86_64.
+#if !defined(__x86_64__) && !defined(_M_AMD64)
   t4();
 #endif
-
   t5();
 
   [Pool release];

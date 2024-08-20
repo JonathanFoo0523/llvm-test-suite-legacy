@@ -70,7 +70,6 @@ main()
       }
    }
    }
-  return 0;
 }
 void cfft2(n,x,y,w,sign)
 int n;
@@ -130,7 +129,7 @@ cplx float *w, float sign)
 {
    int j,k,jc,jw,l,lj,mj2;
    float rp,up;
-   float wr[4] __attribute((aligned(16))), wu[4] __attribute((aligned(16)));
+   float wr[4], wu[4];
    const vector float vminus = (vector float)(-0.,0.,-0.,0.);
    const vector float vzero  = (vector float)(0.,0.,0.,0.);
    const vector unsigned char pv3201 = 

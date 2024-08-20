@@ -85,7 +85,6 @@
 @end
 
 @implementation Bot2
-@dynamic x;
 -(int) _getX {
   printf("-[ Bot2 _getX ]\n");
   return 0;
@@ -117,7 +116,6 @@
 @end
 
 @implementation Bot3
-@dynamic x;
 -(int) x {
   printf("-[ Bot3 x ]\n");
   return 0;

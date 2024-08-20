@@ -21,6 +21,4 @@ int main()
       foo(buf, i);
     }
   }
-
-  return 0;
 }

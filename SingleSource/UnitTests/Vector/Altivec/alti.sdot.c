@@ -6,9 +6,7 @@
 main()
 {
 /* Mac G-4 sdot for arbitrary N wpp 6/8/2002 */
-  float x[N] __attribute__((aligned(16)));
-  float y[N] __attribute__((aligned(16)));
-  float tres,res,eps;
+  float x[N],y[N],tres,res,eps;
   int flag,i,k,ki,kl,n0,n;
   static float seed = 331.0;
   float sdot(int,float *,float *);
@@ -36,7 +34,6 @@ main()
      kl  = 4;
   }
   if(flag == 0) printf(" All n tests passed\n");
-  return 0;
 }
 #define NS 12
 float sdot(int n, float *x, float *y)
@@ -45,7 +42,7 @@ float sdot(int n, float *x, float *y)
   int i,ii,nres,nsegs;
   vector float V7 = (vector float)(0.0,0.0,0.0,0.0);
   vector float V0,V1;
-  float psum[4] __attribute__((aligned(16)));
+  float psum[4];
 // n < NS done in scalar mode
   if(n < NS){
      sum = x[0]*y[0];

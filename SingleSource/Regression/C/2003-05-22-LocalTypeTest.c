@@ -13,7 +13,7 @@ int main() {
     X = S.X;
   }
   { 
-    struct sometimes { signed char X; } S;
+    struct sometimes { char X; } S;
     S.X = -1;
     X += S.X;
   }

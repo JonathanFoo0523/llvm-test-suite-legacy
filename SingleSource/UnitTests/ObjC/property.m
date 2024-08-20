@@ -1,4 +1,4 @@
-#include <Foundation/Foundation.h>
+#include <Cocoa/Cocoa.h>
 
 struct S {
   int f0, f1;

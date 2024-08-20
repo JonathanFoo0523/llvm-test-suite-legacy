@@ -2,11 +2,6 @@
 #include <fstream>
 #include <vector>
 #include <utility>
-#include <typeinfo>
-#include <memory>
-#include <algorithm>
-#include <limits>
-#include <string.h>
 namespace boost { namespace spirit
 {
     struct nil_t {};
@@ -14199,11 +14194,7 @@ int
 main(int argc, char* argv[])
 {
   c_grammar g;
-#ifdef SMALL_PROBLEM_SIZE
-  unsigned long n = 4;
-#else
   unsigned long n = 40;
-#endif
   if (argc > 1)
     n = atol(argv[1]);
   for (unsigned long i=0;i<n;i++)

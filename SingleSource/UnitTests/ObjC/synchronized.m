@@ -1,4 +1,4 @@
-#include <Foundation/Foundation.h>
+#include <Cocoa/Cocoa.h>
 #include <stdio.h>
 
 @interface A : NSThread
@@ -23,13 +23,14 @@ unsigned sum = 0;
   unsigned i;
   for (i = 0; i < kLoopCount; ++i)
     [self addToSum: i];
-  __sync_fetch_and_sub(&numThreads, 1);
+  --numThreads;
 }
 @end
 
 int main() {
   unsigned i;
-  for (i = 0; i < kNumThreads; ++i) {
+  numThreads = 10;
+  for (i = 0; i < numThreads; ++i) {
     [[[A alloc] init] start];
   }
   while (numThreads) ;
