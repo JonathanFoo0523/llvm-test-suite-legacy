@@ -72,7 +72,7 @@ float	    b[];
       for( i=0, uik=a->pd[k]; i<k; i++, uik++ )
 	b[i] -= (*uik)*b[k];
     }
-    return 0;
+    return;
   }
 
   /* job = nonzero.  Solve  trans(a) * x = b. */
@@ -99,5 +99,5 @@ float	    b[];
     b[l] = b[k];
     b[k] = t;
   }
-  return 0;
+  return;
 }
