@@ -1,4 +1,3 @@
-DIRS = Large
 LEVEL = ../../..
 LDFLAGS += -lm
 

@@ -1,6 +1,4 @@
 # SingleSource/UnitTests/Vector/Makefile
-DIRS := Large
-
 LEVEL = ../../..
 
 # You can use this seed value to get a different test
